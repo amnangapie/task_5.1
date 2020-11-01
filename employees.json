@@ -1,0 +1,4 @@
+[
+{"type":"ua.nure.sorokina.Developer","data":{"id":1457,"firstName":"John","lastName":"Smith","rate":700,"actualHoursOfWork":160}},
+{"type":"ua.nure.sorokina.Manager","data":{"id":1458,"firstName":"Sam","lastName":"Black","rate":1000,"actualHoursOfWork":192}}
+]
