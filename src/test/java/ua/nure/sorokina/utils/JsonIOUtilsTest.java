@@ -32,7 +32,7 @@ class JsonIOUtilsTest {
 
         JsonIOUtils.writeToFile(employees);
 
-        File file = new File("employees.json");
+        File file = new File(JsonIOUtils.FILE_NAME);
         FileInputStream fis = new FileInputStream(file);
         byte[] data = new byte[(int) file.length()];
         fis.read(data);

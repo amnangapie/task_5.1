@@ -12,9 +12,11 @@ import java.util.Scanner;
 
 public class JsonIOUtils {
 
+    public static final String FILE_NAME = "output/employees.json";
+
     /* file will be overwritten every time */
     public static synchronized void writeToFile(List<Employee> employees) {
-        try (FileWriter writer = new FileWriter("employees.json")) {
+        try (FileWriter writer = new FileWriter(FILE_NAME)) {
             writer.append("[\n");
             Iterator<Employee> employee = employees.iterator();
             while (employee.hasNext()) {
@@ -34,7 +36,7 @@ public class JsonIOUtils {
     public static List<Employee> readFromFile() {
         List<Employee> employees = new LinkedList<>();
 
-        try (FileReader reader = new FileReader("employees.json")) {
+        try (FileReader reader = new FileReader(FILE_NAME)) {
             Scanner scanner = new Scanner(reader);
 
             while (scanner.hasNextLine()) {
